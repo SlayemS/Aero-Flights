@@ -1,11 +1,12 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
-
+import 'package:aero_flights/pages/forgot_pw_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
   final VoidCallback showRegisterPage;
+
   const LoginPage({Key? key, required this.showRegisterPage}) : super(key: key);
 
   @override
@@ -13,7 +14,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-
   // text controllers
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -53,8 +53,8 @@ class _LoginPageState extends State<LoginPage> {
                 Text(
                   'Aero Flights',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 36,
                   ),
                 ),
                 SizedBox(height: 10),
@@ -114,6 +114,37 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
+
+                SizedBox(height: 10),
+
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return ForgotPasswordPage();
+                              },
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Forgot Password',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
                 SizedBox(height: 20),
 
                 // Sign in button
