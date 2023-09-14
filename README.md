@@ -1,4 +1,4 @@
-# aero_flights
+# Aero Flights
 A Mobile Flight Tracker app.
 
 # Features
