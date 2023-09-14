@@ -1,6 +1,9 @@
 # Aero Flights
 A Mobile Flight Tracker app.
 
+# Description
+Aero Flights is a mobile app that empowers its users to view live flights, their position and destinations. Through the use of an API, this project took flight. ✈️
+
 # Features
 - Tracks live flights' position on a map
 - Enables to view flight details and prices
